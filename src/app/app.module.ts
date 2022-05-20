@@ -3,18 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { NavigationComponent } from './navigation/navigation.component';
-import { HeaderDashboardComponent } from './header-dashboard/header-dashboard.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { ModelsComponent } from './models/models.component';
-import { LoginComponent } from './login/login.component';
-import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
-import { LayoutComponent } from './layout/layout.component';
-import { ListComponent } from './list/list.component';
-import { CollectionsComponent } from './collections/collections.component';
-import { EditModelComponent } from './edit-model/edit-model.component';
-import { EditCollectionComponent } from './edit-collection/edit-collection.component';
+import { HomeComponent } from './pages/home/home.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
+import { HeaderDashboardComponent } from './components/header-dashboard/header-dashboard.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ModelsComponent } from './pages/models/models.component';
+import { LoginComponent } from './pages/login/login.component';
+import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
+import { LayoutComponent } from './components/layout/layout.component';
+import { ListComponent } from './components/list/list.component';
+import { CollectionsComponent } from './pages/collections/collections.component';
+import { EditModelComponent } from './pages/edit-model/edit-model.component';
+import { EditCollectionComponent } from './pages/edit-collection/edit-collection.component';
 
 @NgModule({
   declarations: [
