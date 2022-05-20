@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModelsComponent implements OnInit {
 
+  thead = {
+    th1: "ModeloID",
+    th2: "Nome do Modelo",
+    th3: "Coleção",
+    th4: "Responsável",
+  }
+  routerLink = "/edit-model/1"
+
   constructor() { }
 
   ngOnInit(): void {
