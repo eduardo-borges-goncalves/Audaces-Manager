@@ -7,12 +7,12 @@ import { HomeComponent } from './home/home.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { HeaderDashboardComponent } from './header-dashboard/header-dashboard.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { RouterModule } from '@angular/router';
-import { ColectionsComponent } from './colections/colections.component';
 import { ModelsComponent } from './models/models.component';
 import { LoginComponent } from './login/login.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { LayoutComponent } from './layout/layout.component';
+import { ListComponent } from './list/list.component';
+import { CollectionsComponent } from './collections/collections.component';
 
 @NgModule({
   declarations: [
@@ -21,11 +21,12 @@ import { LayoutComponent } from './layout/layout.component';
     NavigationComponent,
     HeaderDashboardComponent,
     DashboardComponent,
-    ColectionsComponent,
     ModelsComponent,
     LoginComponent,
     ForgotPasswordComponent,
-    LayoutComponent
+    LayoutComponent,
+    ListComponent,
+    CollectionsComponent
   ],
   imports: [
     BrowserModule,
