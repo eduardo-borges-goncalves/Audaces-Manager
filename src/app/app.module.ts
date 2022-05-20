@@ -13,6 +13,8 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { LayoutComponent } from './layout/layout.component';
 import { ListComponent } from './list/list.component';
 import { CollectionsComponent } from './collections/collections.component';
+import { EditModelComponent } from './edit-model/edit-model.component';
+import { EditCollectionComponent } from './edit-collection/edit-collection.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { CollectionsComponent } from './collections/collections.component';
     ForgotPasswordComponent,
     LayoutComponent,
     ListComponent,
-    CollectionsComponent
+    CollectionsComponent,
+    EditModelComponent,
+    EditCollectionComponent
   ],
   imports: [
     BrowserModule,
