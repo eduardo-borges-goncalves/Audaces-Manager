@@ -14,6 +14,8 @@ export class CollectionsComponent implements OnInit {
     th4: "Responsável",
   }
 
+  routerLink = "/edit-collection/1" //tem um santo role aqui
+
   constructor() { }
 
   ngOnInit(): void {

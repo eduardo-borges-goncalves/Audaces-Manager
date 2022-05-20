@@ -13,6 +13,7 @@ export class ModelsComponent implements OnInit {
     th3: "Coleção",
     th4: "Responsável",
   }
+  routerLink = "/edit-model/1"
 
   constructor() { }
 

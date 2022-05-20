@@ -15,6 +15,7 @@ type TheadProps = {
 export class ListComponent implements OnInit {
 
   @Input() thead!: TheadProps 
+  @Input() routerLink!: string
 
   constructor() { }
 
