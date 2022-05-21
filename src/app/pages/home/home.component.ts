@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Collection } from 'src/app/interfaces/collections';
+import { CollectionsService } from 'src/app/services/collections/collections.service';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  collections:Collection[] = []
 
-  constructor() { }
+  constructor(private service: CollectionsService) { 
+    this.getCollections()
+  }
 
   ngOnInit(): void {
   }
 
+  getCollections() {
+    this.service.get().subscribe(collections => this.collections = collections)
+  }
 }
