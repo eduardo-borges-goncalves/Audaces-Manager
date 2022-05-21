@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Models } from 'src/app/interfaces/models';
+import { ModelsService } from 'src/app/services/models/models.service';
 
 @Component({
   selector: 'app-models',
@@ -6,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./models.component.scss']
 })
 export class ModelsComponent implements OnInit {
+  models: Models[] = []
 
   thead = {
     th1: "ModeloID",
@@ -15,9 +18,15 @@ export class ModelsComponent implements OnInit {
   }
   routerLink = "/edit-model/1"
 
-  constructor() { }
+  constructor(private service: ModelsService) {
+    this.getModels()
+   }
 
   ngOnInit(): void {
+  }
+
+  getModels() {
+    this.service.get().subscribe(models => this.models = models)
   }
 
 }
