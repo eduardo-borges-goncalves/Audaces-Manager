@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Collection } from 'src/app/interfaces/collections';
+import { CollectionsService } from 'src/app/services/collections/collections.service';
 
 @Component({
   selector: 'app-collections',
@@ -16,9 +18,16 @@ export class CollectionsComponent implements OnInit {
 
   routerLink = "/edit-collection/1" //tem um santo role aqui
 
-  constructor() { }
+  collections:Collection[] = []
+
+  constructor(private service: CollectionsService) {
+    this.getCollections()
+   }
 
   ngOnInit(): void {
   }
 
+  getCollections () {
+    this.service.get().subscribe(collections => this.collections = collections)
+  }
 }

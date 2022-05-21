@@ -1,0 +1,18 @@
+<table>
+  <thead>
+    <th>{{thead.th1}}</th>
+    <th>{{thead.th2}}</th>
+    <th>{{thead.th3}}</th>
+    <th>{{thead.th4}}</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let model of models">
+      <a [routerLink]="[routerLink]">
+        <td>{{model.id}}</td>
+        <td>{{model.name}}</td>
+        <td>{{model.collection}}</td>
+        <td>{{model.responsible}}</td>
+      </a>
+    </tr>
+  </tbody>
+</table>
