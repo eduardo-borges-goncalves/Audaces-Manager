@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Collection } from 'src/app/interfaces/collections';
 
 @Component({
   selector: 'app-dashboard',
@@ -13,6 +14,8 @@ export class DashboardComponent implements OnInit {
     th3: "Orçamento",
     th4: "Responsável",
   }
+
+  @Input() collections!: Collection[]
 
   constructor() { 
 
