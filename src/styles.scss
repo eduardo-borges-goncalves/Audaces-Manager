@@ -1,5 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: rgb(134, 133, 130);
   background-color: rgb(175, 175, 175);
+
+  font-family: "Inter", sans-serif;
+
+  --primary-gray: #2C2C2C;
+  --light-gray: #B4B6C1;
+  --primary-blue: #0073CF;
+  --light-blue: #F2F5FF;
+
+  --background: #FEFEFE;
+  --shapee: #EBF0FA;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
+
+
+
+
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
