@@ -1,29 +1,38 @@
 <main>
   <h1>Edital Modelo</h1>
-  <form action="">
+  <form action="" [formGroup]="form">
     <fieldset>
       <input 
-      placeholder=""
-      type="text"/>
-      <select name="" id=""></select>
-      <label for="">Possui bordado?</label>
-      <input 
-      type="radio"/>
-      <input 
-      type="radio"/>
+        formControlName="name"
+        placeholder=""
+        type="text"/>
+      <select 
+        formControlName="type"
+        name="" id="">
+      </select>
+      <label for="" formControlName="embroidery" >
+        Possui bordado?
+        <input type="radio" />
+        <input type="radio" />
+      </label>
     </fieldset>
     <fieldset>
       <input 
-      placeholder=""
-      type="text"/>
-      <select name="" id=""></select>
-      <label for="">Possui estampa?</label>  
-      <input 
-      type="radio"/>
-      <input 
-      type="radio"/>
+        formControlName="responsible"
+        placeholder=""
+        type="text"/>
+      <select
+        formControlName="collection"
+        name="" id="">
+      </select>
+      <label for="" formControlName="print">
+        Possui estampa?
+        <input type="radio"/>
+        <input type="radio"/>
+      </label>  
     </fieldset>
   </form>
-  <button>Atualizar</button>
+  <button (click)="onDelete()">Deletar</button>
+  <button (click)="onSubmit()">Salvar</button>
   <button>Cancelar</button>
 </main>
