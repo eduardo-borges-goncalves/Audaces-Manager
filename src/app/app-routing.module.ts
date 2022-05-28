@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CollectionsComponent } from './pages/collections/collections.component';
-import { EditCollectionComponent } from './pages/edit-collection/edit-collection.component';
-import { EditModelComponent } from './pages/edit-model/edit-model.component';
-import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
-import { HomeComponent } from './pages/home/home.component';
+import { CollectionsComponent } from './pages/collections-page/collections.component';
+import { EditCollectionComponent } from './pages/edit-collection-page/edit-collection.component';
+import { EditModelComponent } from './pages/edit-model-page/edit-model.component';
+import { ForgotPasswordComponent } from './pages/forgot-password-page/forgot-password.component';
+import { HomeComponent } from './pages/home-page/home.component';
 import { LayoutComponent } from './components/layout/layout.component';
-import { LoginComponent } from './pages/login/login.component';
+import { LoginComponent } from './pages/login-page/login.component';
 import { ModelsComponent } from './pages/models/models.component';
 
 const routes: Routes = [
