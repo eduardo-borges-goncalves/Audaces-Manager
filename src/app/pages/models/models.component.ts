@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Models } from 'src/app/interfaces/models';
+import { Model } from 'src/app/interfaces/models';
 import { ModelsService } from 'src/app/services/models/models.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { ModelsService } from 'src/app/services/models/models.service';
   styleUrls: ['./models.component.scss']
 })
 export class ModelsComponent implements OnInit {
-  models: Models[] = []
+  models: Model[] = []
 
   thead = {
     th1: "ModeloID",
@@ -16,7 +16,6 @@ export class ModelsComponent implements OnInit {
     th3: "Coleção",
     th4: "Responsável",
   }
-  routerLink = "/edit-model/1"
 
   constructor(private service: ModelsService) {
     this.getModels()
