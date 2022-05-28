@@ -18,6 +18,7 @@ import { EditCollectionComponent } from './pages/edit-collection-page/edit-colle
 import { CollectionsListComponent } from './components/collections-list/collections-list.component';
 import { ModelsListComponent } from './components/models-list/models-list.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AppRoutingModule, 
     HttpClientModule,
     NgbModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

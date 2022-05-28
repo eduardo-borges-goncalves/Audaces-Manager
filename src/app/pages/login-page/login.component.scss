@@ -30,7 +30,7 @@ form {
   }
 
   input {
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
 
     display: flex;
     flex-direction: row;
@@ -50,8 +50,12 @@ form {
     color: var(--light-gray)
   }
 
-  p, .last-input {
+  p {
     margin-bottom: 49px;
+  }
+
+  button {
+    margin-top: 19px;
   }
 
   p {
@@ -61,6 +65,14 @@ form {
 
     color: var(--light-gray);
   } 
+  
+  .error {
+    height: 30px;
+    font-size: small;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+  }
 }
 
 section {
