@@ -3,30 +3,37 @@
 -->
  <main>
   <h1>Editar Coleção</h1>
-  <form action="">
+  <form action="" [formGroup]="form">
     <fieldset>
       <input 
-      placeholder=""
-      type="text"/>
+        formControlName="name"
+        placeholder="Nome da Coleção"
+        type="text"/>
       <input 
-      placeholder=""
-      type="text"/>
+        formControlName="season"
+        placeholder="Para qual estação?"
+        type="text"/>
       <input 
-      placeholder=""
-      type="text"/>
+        formControlName="budget"
+        placeholder="Qual é o orçamento desta coleção?"
+        type="text"/>
     </fieldset>
     <fieldset>
       <input 
-      placeholder=""
-      type="text"/>
+        formControlName="responsible"
+        placeholder="Responsável pela coleção "
+        type="text"/>
       <input 
-      placeholder=""
-      type="text"/>
+        formControlName="brand"
+        placeholder="Para qual marca você está criando?"
+        type="text"/>
       <input 
-      placeholder=""
-      type="text"/>
+        formControlName="launchYear"
+        placeholder="Ano de Lançamento"
+        type="text"/>
     </fieldset>
   </form>
-  <button>Atualizar</button>
+  <button (click)="onDelete()">Excluir</button>
   <button>Cancelar</button>
+  <button (click)="onSubmit()">Salvar</button>
 </main>
