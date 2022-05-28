@@ -7,7 +7,7 @@
   </thead>
   <tbody>
     <tr *ngFor="let collection of collections">
-      <a [routerLink]="[routerLink]">
+      <a  (click)="onEdit(collection.id)"> 
         <td>{{collection.id}}</td>
         <td>{{collection.name}}</td>
         <td>{{collection.budget}}</td>
