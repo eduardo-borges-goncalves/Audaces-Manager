@@ -1,0 +1,39 @@
+<div class=" h-100 w-100 d-flex justify-content-center align-items-center
+  flex-column login-container">
+  <section>
+    <img src="../../../assets/AudacesLogo.svg" alt="">
+    <form class="d-flex flex-column d-flex justify-content-center form"
+      [formGroup]="loginForm"
+      (ngSubmit)="onSubmit()">
+      <h1 class="d-flex justify-content-center ">Sign In</h1>
+      <p>Insira suas credenciais para acessar sua conta</p>
+      <input formControlName="email" placeholder="Informe seu e-mail" type="email" />
+      <div class="error">
+        <span class="text-danger" *ngIf="( submitted) && loginFormControl.email.errors?.required">
+          Favor inserir um email válido
+        </span>
+        <span class="text-danger" *ngIf="loginFormControl.email.touched && loginFormControl.email.errors?.email">
+          Insira um email válido
+        </span>
+      </div>
+      <input formControlName="password" placeholder="Informe sua senha" type="password" />
+      <div class="error">
+        <span 
+          class="text-danger" 
+          *ngIf="(submitted) && loginFormControl.password.errors?.required">
+          Favor inserir senha
+        </span>
+        <span 
+          class="text-danger"
+          *ngIf="loginFormControl.password.touched && loginFormControl.password.errors?.invalidPassword">
+          A senha deve possuir no mínimo 6 caracteres
+        </span>
+      </div>
+      <button class="btn btn-primary" type="submit">Entrar</button>
+    </form>
+    <div class="d-flex justify-content-center">
+      <span>Esqueceu sua senha? </span>
+      <a [routerLink]="['/forgot-password']"> Redefinir senha</a>
+    </div>
+  </section>
+</div>

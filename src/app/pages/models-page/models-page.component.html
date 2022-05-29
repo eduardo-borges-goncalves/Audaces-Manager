@@ -1,0 +1,12 @@
+<header>
+  <h1>Modelos</h1>
+  <a routerLink="/models/create">
+    <button class="btn btn-primary">Criar Modelo</button>
+  </a>
+</header>
+<section>
+  <app-models-list
+    [thead]="thead"
+    [models]="models" >
+  </app-models-list>
+</section>

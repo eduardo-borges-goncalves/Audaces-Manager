@@ -1,0 +1,136 @@
+{
+  "modelos": [
+    {
+      "id": 6,
+      "name": "Modelo 1",
+      "type": "bolsa",
+      "responsible": "naldo jao",
+      "collection": "crepúsculo",
+      "embroidery": "false",
+      "print": "false"
+    },
+    {
+      "id": 8,
+      "name": "Modelo 2",
+      "type": "biquini",
+      "responsible": "Izzie",
+      "collection": "verão"
+    },
+    {
+      "id": 9,
+      "name": "asdfsdf",
+      "type": "calca",
+      "responsible": "asdfsdf",
+      "collection": "crepúsculo",
+      "embroidery": "",
+      "print": ""
+    },
+    {
+      "id": 10,
+      "name": "asdfas",
+      "type": "bolsa",
+      "responsible": "asdfasdf",
+      "collection": "crepúsculo",
+      "embroidery": "false",
+      "print": "false"
+    },
+    {
+      "id": 11,
+      "name": "asdfsf",
+      "type": "bone",
+      "responsible": "sdasdf",
+      "collection": "crepúsculo",
+      "embroidery": "true",
+      "print": "true"
+    }
+  ],
+  "colecoes": [
+    {
+      "id": 1,
+      "name": "Homeless Novel 2",
+      "season": "Invernoas",
+      "budget": "250000",
+      "responsible": "Pedro",
+      "brand": "Balenciaga",
+      "launchYear": "2022"
+    },
+    {
+      "id": 4,
+      "name": "Outono",
+      "budget": "75000",
+      "responsible": "Eduardo"
+    },
+    {
+      "id": 5,
+      "name": "Alberto Monteiro",
+      "season": "Inverno",
+      "budget": "800000",
+      "responsible": "Bruna",
+      "brand": "Douce Gabanna",
+      "launchYear": "2023"
+    },
+    {
+      "id": 7,
+      "name": "joao ",
+      "season": "joao ",
+      "budget": "200",
+      "responsible": "joao ",
+      "brand": "joao ",
+      "launchYear": "joao "
+    },
+    {
+      "id": 8,
+      "name": "asdfasdf",
+      "season": "asdfsaf",
+      "budget": "100",
+      "responsible": "asdasdf",
+      "brand": "sadfasdf",
+      "launchYear": "asdfasdf"
+    },
+    {
+      "id": 9,
+      "name": "asdfasdf",
+      "season": "asdfsaf",
+      "budget": "100",
+      "responsible": "asdasdf",
+      "brand": "sadfasdf",
+      "launchYear": "asdfasdf"
+    },
+    {
+      "id": 10,
+      "name": "asdfasdf",
+      "season": "asdfsaf",
+      "budget": "100",
+      "responsible": "asdasdf",
+      "brand": "sadfasdf",
+      "launchYear": "asdfasdf"
+    },
+    {
+      "id": 11,
+      "name": "asdfasdf",
+      "season": "asdfsaf",
+      "budget": "100",
+      "responsible": "asdasdf",
+      "brand": "sadfasdf",
+      "launchYear": "asdfasdf"
+    },
+    {
+      "id": 12,
+      "name": "asdfasdf",
+      "season": "asdfsaf",
+      "budget": "100",
+      "responsible": "asdasdf",
+      "brand": "sadfasdf",
+      "launchYear": "asdfasdf"
+    },
+    {
+      "id": 13,
+      "name": "fsdfasdf",
+      "season": "asdfsadf",
+      "budget": "800",
+      "responsible": "asdfsdf",
+      "brand": "sdfasdf",
+      "launchYear": "asdfsdf"
+    }
+  ]
+}

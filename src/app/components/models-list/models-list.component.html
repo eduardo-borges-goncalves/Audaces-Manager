@@ -1,0 +1,20 @@
+<table>
+  <thead>
+    <tr class="theadTr">
+      <th>{{thead.th1}}</th>
+      <th>{{thead.th2}}</th>
+      <th>{{thead.th3}}</th>
+      <th>{{thead.th4}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let model of models">
+      <a (click)="onEdit(model.id)">
+        <td>{{model.id}}</td>
+        <td>{{model.name}}</td>
+        <td>{{model.collection}}</td>
+        <td>{{model.responsible}}</td>
+      </a>
+    </tr>
+  </tbody>
+</table>
