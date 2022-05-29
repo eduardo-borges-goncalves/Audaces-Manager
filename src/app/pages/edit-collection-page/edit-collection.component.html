@@ -1,39 +1,45 @@
-<!-- 
-  pegar id na url, se tiver id, mostrar um título, senão, mostrar outro
--->
- <main>
-  <h1>Editar Coleção</h1>
-  <form action="" [formGroup]="form">
-    <fieldset>
-      <input 
+ <main >
+  <h1 *ngIf="this.form.value.id">Editar Coleção</h1>
+  <h1 *ngIf="!this.form.value.id">Criar Coleção</h1>
+
+  <div class="edit-container" >
+    <form action="" [formGroup]="form">
+      <fieldset>
+        <input 
         formControlName="name"
         placeholder="Nome da Coleção"
         type="text"/>
-      <input 
+        <input 
         formControlName="season"
         placeholder="Para qual estação?"
         type="text"/>
-      <input 
+        <input 
         formControlName="budget"
         placeholder="Qual é o orçamento desta coleção?"
         type="text"/>
-    </fieldset>
-    <fieldset>
-      <input 
+      </fieldset>
+      <fieldset>
+        <input 
         formControlName="responsible"
         placeholder="Responsável pela coleção "
         type="text"/>
-      <input 
+        <input 
         formControlName="brand"
         placeholder="Para qual marca você está criando?"
         type="text"/>
-      <input 
+        <input 
         formControlName="launchYear"
         placeholder="Ano de Lançamento"
         type="text"/>
-    </fieldset>
-  </form>
-  <button (click)="onDelete()">Excluir</button>
-  <button>Cancelar</button>
-  <button (click)="onSubmit()">Salvar</button>
+      </fieldset>
+    </form>
+    <img 
+    src="../../../assets/edit-collection.jpg"
+    alt="imagem de um manequim, além de 3 celulares, um com uma camisa, um com bolinhas e outros com linhas">
+    <button class="btn btn-danger btn-del" *ngIf="this.form.value.id" (click)="onDelete()">Excluir</button>
+    <div class="form-buttons">
+      <button class="btn-cancel" >Cancelar</button>
+      <button class="btn btn-primary" (click)="onSubmit()">Salvar</button>
+    </div>
+  </div>
 </main>

@@ -1,5 +1,5 @@
 header {
-  margin: 60px 0 166px 80px;
+  margin-bottom:166px;
   display: flex;
   justify-content: space-between;
 
@@ -14,9 +14,24 @@ header {
 
     color: #2C2C2C;
   }
+
+  button {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    padding: 14px ;
+    width: 220px;
+    height: 50px;
+  }
 }
 
 section {
   margin-top: 64px;
-  margin-left: 112px;
+  margin-left: 32px;
+  margin-right: 32px;
 }

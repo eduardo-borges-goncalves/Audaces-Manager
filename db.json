@@ -1,13 +1,6 @@
 {
   "modelos": [
     {
-      "id": 2,
-      "name": "Modelo 2",
-      "type": "bermuda",
-      "responsible": "Izzie",
-      "collection": "Primavera"
-    },
-    {
       "name": "Modelo 2",
       "responsible": "Izzie",
       "collection": "Outono",
@@ -48,10 +41,10 @@
   "colecoes": [
     {
       "id": 1,
-      "name": "Homeless Novel",
+      "name": "Homeless Novel 2",
+      "season": "Invernoas",
       "budget": "250000",
       "responsible": "Pedro",
-      "season": "Inverno",
       "brand": "Balenciaga",
       "launchYear": "2022"
     },

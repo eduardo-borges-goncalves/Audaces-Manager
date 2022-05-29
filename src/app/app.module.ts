@@ -22,6 +22,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import ptBr from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
+import { ButtonComponent } from './components/button/button.component';
 
 registerLocaleData(ptBr);
 
@@ -41,7 +42,9 @@ registerLocaleData(ptBr);
     EditModelComponent,
     EditCollectionComponent,
     CollectionsListComponent,
-    ModelsListComponent
+    ModelsListComponent,
+    ButtonComponent,
+ 
   ],
   imports: [
     BrowserModule,
