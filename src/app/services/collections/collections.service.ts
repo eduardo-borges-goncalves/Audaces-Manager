@@ -24,7 +24,7 @@ export class CollectionsService {
   }
 
   update(data: Collection): Observable<any> {
-    return this.http.patch(`${this.url}/${data.id}`, data).pipe(take(1))
+    return this.http.put(`${this.url}/${data.id}`, data).pipe(take(1))
   }
  
   delete(id: string): Observable<any> {
