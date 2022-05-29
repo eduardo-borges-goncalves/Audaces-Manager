@@ -1,17 +1,20 @@
 <header>
-  <h2>Bem vindo, Yan</h2>
-  <p>Acompanhe a visão geral de suas coleções</p>
-  
   <div>
-    <span>Coleções</span>
-    <span></span>
+    <h2>Bem vindo, Yan</h2>
+    <p>Acompanhe a visão geral de suas coleções</p>
   </div>
-  <div>
-    <span>Modelos</span>
-    <span></span>
-  </div>
-  <div>
-    <span>Orçamento médio por coleção</span>
-    <span></span>
+  <div class="cards-group">
+    <div class="card">
+      <span>Coleções</span>
+      <span class="card-value"> {{dashboardData.collections}} </span>
+    </div>
+    <div class="card">
+      <span>Modelos</span>
+      <span class="card-value">{{dashboardData.models}}</span>
+    </div>
+    <div class="card">
+      <span>Orçamento médio por coleção</span>
+      <span class="card-value">{{dashboardData.mediaBudget | currency: "BRL"}}</span>
+    </div>
   </div>
 </header>

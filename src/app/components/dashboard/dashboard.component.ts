@@ -18,10 +18,8 @@ export class DashboardComponent implements OnInit {
   @Input() collections!: Collection[]
 
   constructor() { 
-
   }
 
   ngOnInit(): void {
   }
-
 }

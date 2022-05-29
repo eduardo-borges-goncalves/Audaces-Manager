@@ -8,7 +8,6 @@ import { HomeComponent } from './pages/home-page/home.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { HeaderDashboardComponent } from './components/header-dashboard/header-dashboard.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { ModelsComponent } from './pages/models/models.component';
 import { LoginComponent } from './pages/login-page/login.component';
 import { ForgotPasswordComponent } from './pages/forgot-password-page/forgot-password.component';
 import { LayoutComponent } from './components/layout/layout.component';
@@ -22,6 +21,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import ptBr from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
+import { ModelsPageComponent } from './pages/models-page/models-page.component';
 
 registerLocaleData(ptBr);
 
@@ -32,16 +32,15 @@ registerLocaleData(ptBr);
     NavigationComponent,
     HeaderDashboardComponent,
     DashboardComponent,
-    ModelsComponent,
     LoginComponent,
     ForgotPasswordComponent,
     LayoutComponent,
-  
     CollectionsComponent,
     EditModelComponent,
     EditCollectionComponent,
     CollectionsListComponent,
-    ModelsListComponent
+    ModelsListComponent,
+    ModelsPageComponent,
   ],
   imports: [
     BrowserModule,

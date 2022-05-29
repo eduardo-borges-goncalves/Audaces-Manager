@@ -1,6 +1,50 @@
 header {
+  display: flex;
+  flex-direction: column;
+  gap: 85px;
+  color: #989898;
 
-  margin-top:  70px;
-  margin-left: 80px;
-  // border: solid;
+  h2 {
+    font-size: 24px;
+    color: #2C2C2C;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 14px;
+  gap: 13px;
+
+  width: 245px;
+  height: 80px;
+
+  background: #EBF0FA;
+  color: #2B2C33;
+  border-radius: 6px;
+  border: none;
+
+  span {
+    font-size: 14px;
+    line-height: 17px;
+
+    text-align: center;
+    color: #2B2C33;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+
+  .card-value {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
+
+.cards-group {
+  display: flex;
+  gap: 169px;
 }

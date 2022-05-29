@@ -7,7 +7,7 @@ import { ForgotPasswordComponent } from './pages/forgot-password-page/forgot-pas
 import { HomeComponent } from './pages/home-page/home.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { LoginComponent } from './pages/login-page/login.component';
-import { ModelsComponent } from './pages/models/models.component';
+import { ModelsPageComponent } from './pages/models-page/models-page.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -15,13 +15,13 @@ const routes: Routes = [
     path: '', 
     component: LayoutComponent, 
     children: [
-      { path: '', component: HomeComponent},
+      { path: 'home', component: HomeComponent},
       { path: 'collections', component: CollectionsComponent},
-      { path: 'models', component: ModelsComponent}, 
+      { path: 'models', component: ModelsPageComponent}, 
       { path: 'help', component: HomeComponent}, 
       { path: 'send-comment', component: HomeComponent},
-      { path: 'create-collection', component: EditCollectionComponent},
-      { path: 'create-model', component: EditModelComponent},
+      { path: 'collections/create', component: EditCollectionComponent},
+      { path: 'models/create', component: EditModelComponent},
       { path: 'collections/edit/:id', component: EditCollectionComponent},
       { path: 'models/edit/:id', component: EditModelComponent},
     ]

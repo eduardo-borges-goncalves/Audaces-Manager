@@ -1,4 +1,3 @@
-/* You can add global styles to this file, and also import other style files */
 *{
   margin: 0;
   padding: 0;
@@ -6,8 +5,7 @@
 }
 
 body {
-  background-color: rgb(134, 133, 130);
-  background-color: rgb(175, 175, 175);
+  background-color: #FEFEFE;
 
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -15,6 +13,26 @@ body {
 
   h1, h2, h3 {
     font-weight: 600;
+  }
+
+  button {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 600;
+  }
+
+  input, select {
+    display: flex;
+    align-items: center;
+    padding: 13px 15px;
+
+    border: 1px solid var(--shapee);
+    border-radius: 6px;
+    color: var(--primary-gray);
+  }
+
+  input::placeholder { 
+    color: var(--light-gray)
   }
 
   --primary-gray: #2C2C2C;
@@ -32,8 +50,35 @@ body {
   bottom: 0;
 }
 
+.mainContainer {
+  // border: solid;
+  width: 100%;
+  margin-top:  70px;
+  padding-left: 80px;
+  padding-right: 79px;
+  padding-bottom: 81px;
+}
 
+.btn-cancel {
+  border: none;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 0;
+  
+  width: 180px;
+  height: 50px;
+
+  background: #EBEBEB;
+  border-radius: 6px;
+
+  color: #A098AE;
+  transition: all ease-in-out .2s;
+}
+.btn-cancel:hover{ 
+  background-color: #e4e3e3;
+}
 
 
 /* Importing Bootstrap SCSS file. */

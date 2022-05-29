@@ -22,7 +22,6 @@ export class CollectionsListComponent implements OnInit {
   }
 
   onEdit(id: string) {
-    console.log("click")
-    this._router.navigate(["edit", id], { relativeTo: this._activeRoute}) 
+    this._router.navigate(["/collections/edit", id], { relativeTo: this._activeRoute}) 
   }
 }

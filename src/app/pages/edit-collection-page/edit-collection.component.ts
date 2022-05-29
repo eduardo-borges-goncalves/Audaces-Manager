@@ -59,15 +59,21 @@ export class EditCollectionComponent implements OnInit {
     if(this.form.valid) {
       if(this.form.value.id) {
         this._service.update(this.form.value).subscribe()
-        this._router.navigate(["/collections"])
       } else {
         this._service.post(this.form.value).subscribe()
       }
+      this._router.navigate(["/collections"])
+    } else {
+      window.alert("Algum campo não está preenchido corretamente ainda. Favor preencher todos os campos. ")
     }
   }
   
   public onDelete() {
     this._service.delete(this.form.value.id).subscribe()
+    this._router.navigate(["/collections"])
+  }
+  
+  public onCancel() {
     this._router.navigate(["/collections"])
   }
 }

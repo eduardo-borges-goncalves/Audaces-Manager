@@ -1,80 +1,94 @@
 <main>
-  <h1>Edital Modelo</h1>
-  <form action="" [formGroup]="form">
-    <fieldset>
-      <input 
-        formControlName="name"
-        placeholder=""
-        type="text"/>
-      <select 
-        formControlName="type"
-        name="" id="">
-        <option value="bermuda"> Bermuda </option>
-        <option value="biquini"> Biquíni </option>
-        <option value="bolsa"> Bolsa </option>
-        <option value="bone"> Boné </option>
-        <option value="calca"> Calça </option>
-        <option value="calcados"> Calçados </option>
-        <option value="camisa"> Camisa </option>
-        <option value="chapeu"> Chapéu </option>
-        <option value="saia"> Saia </option>
-      </select>
-      <span> Possui bordado? </span>
-      <label for="embroideryYes"> 
+  <h1 *ngIf="this.form.value.id">Editar Modelo</h1>
+  <h1 *ngIf="!this.form.value.id">Criar Modelo</h1>
+
+  <div class="edit-container">
+    <form action="" [formGroup]="form">
+      <fieldset>
         <input 
-          id="embroideryYes" 
-          type="radio" 
-          formControlName="embroidery"
-          name="embroidery"
-          value={{true}}/>
-        Sim
-      </label>  
-      <label for="embroideryNo"> 
+          formControlName="name"
+          placeholder=""
+          type="text"/>
+        <select 
+          formControlName="type"
+          name="" id="">
+          <option value="bermuda"> Bermuda </option>
+          <option value="biquini"> Biquíni </option>
+          <option value="bolsa"> Bolsa </option>
+          <option value="bone"> Boné </option>
+          <option value="calca"> Calça </option>
+          <option value="calcados"> Calçados </option>
+          <option value="camisa"> Camisa </option>
+          <option value="chapeu"> Chapéu </option>
+          <option value="saia"> Saia </option>
+        </select>
+        <div class="radio-group">
+          <span> Possui bordado? </span>
+          <div>
+            <label for="embroideryYes"> 
+              <input 
+              id="embroideryYes" 
+              type="radio" 
+              formControlName="embroidery"
+              name="embroidery"
+              value={{true}}/>
+              Sim
+            </label>  
+            <label for="embroideryNo"> 
+              <input 
+              id="embroideryNo" 
+              type="radio" 
+              formControlName="embroidery"
+              name="embroidery" 
+              value={{false}}/>
+              Não
+            </label>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
         <input 
-          id="embroideryNo" 
-          type="radio" 
-          formControlName="embroidery"
-          name="embroidery" 
-          value={{false}}/>
-        Não
-      </label>
-    </fieldset>
-    <fieldset>
-      <input 
-        formControlName="responsible"
-        placeholder=""
-        type="text"/>
-      <select
-        formControlName="collection"
-        name="" id="">
-        <option 
-          *ngFor="let collection of collections" 
-          value={{collection}}>
-          {{collection}} 
-        </option>
-      </select>
-      <span> Possui estampa? </span>
-      <label for="printYes"> 
-        <input 
-          id="printYes" 
-          type="radio" 
-          formControlName="print" 
-          name="print"
-          value={{true}}/>
-        Sim
-      </label>  
-      <label for="printNo"> 
-        <input 
-          id="printNo" 
-          type="radio" 
-          formControlName="print" 
-          name="print" 
-          value={{false}}/>
-        Não
-      </label>
-    </fieldset>
-  </form>
-  <button (click)="onDelete()">Excluir</button>
-  <button>Cancelar</button>
-  <button (click)="onSubmit()">Salvar</button>
+          formControlName="responsible"
+          placeholder=""
+          type="text"/>
+        <select
+          formControlName="collection"
+          name="" id="">
+          <option 
+            *ngFor="let collection of collections" 
+            value={{collection}}>
+            {{collection}} 
+          </option>
+        </select>
+        <div class="radio-group">
+          <span> Possui estampa? </span>
+          <div>
+            <label for="printYes"> 
+              <input 
+              id="printYes" 
+              type="radio" 
+              formControlName="print" 
+            name="print"
+            value={{true}}/>
+            Sim
+          </label>  
+          <label for="printNo"> 
+            <input 
+            id="printNo" 
+            type="radio" 
+            formControlName="print" 
+            name="print" 
+            value={{false}}/>
+            Não
+          </label>
+        </div>
+        </div>
+      </fieldset>
+    </form>
+    <button class="btn btn-danger btn-del" *ngIf="this.form.value.id" (click)="onDelete()">Excluir</button>
+    <div class="form-buttons">
+      <button class="btn-cancel" (click)="onCancel()" >Cancelar</button>
+      <button class="btn btn-primary" (click)="onSubmit()">Salvar</button>
+    </div>
+  </div>
 </main>
