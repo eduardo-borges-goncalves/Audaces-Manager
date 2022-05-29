@@ -10,6 +10,12 @@ body {
   background-color: rgb(175, 175, 175);
 
   font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+
+  h1, h2, h3 {
+    font-weight: 600;
+  }
 
   --primary-gray: #2C2C2C;
   --light-gray: #B4B6C1;

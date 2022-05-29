@@ -3,7 +3,7 @@ export interface Model {
   name: string, 
   collection: string, 
   responsible: string, 
-  embroidery: string, 
-  print: string, 
   type: string, 
+  embroidery: boolean, 
+  print: boolean, 
 }

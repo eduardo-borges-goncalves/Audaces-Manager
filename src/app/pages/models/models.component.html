@@ -1,11 +1,13 @@
-
-<h1>Modelos</h1>
-<a routerLink="/create-model">
-  <button>Criar Modelo</button>
-</a>
-
-<app-models-list
-  [thead]="thead"
-  [models]="models"
->
-</app-models-list>
+<header>
+  <h1>Modelos</h1>
+  <a routerLink="/create-model">
+    <button>Criar Modelo</button>
+  </a>
+</header>
+<section>
+  <app-models-list
+    [thead]="thead"
+    [models]="models"
+    >
+  </app-models-list>
+</section>

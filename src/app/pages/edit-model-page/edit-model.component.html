@@ -9,11 +9,34 @@
       <select 
         formControlName="type"
         name="" id="">
+        <option value="bermuda"> Bermuda </option>
+        <option value="biquini"> Biquíni </option>
+        <option value="bolsa"> Bolsa </option>
+        <option value="bone"> Boné </option>
+        <option value="calca"> Calça </option>
+        <option value="calcados"> Calçados </option>
+        <option value="camisa"> Camisa </option>
+        <option value="chapeu"> Chapéu </option>
+        <option value="saia"> Saia </option>
       </select>
-      <label for="" formControlName="embroidery" >
-        Possui bordado?
-        <input type="radio" />
-        <input type="radio" />
+      <span> Possui bordado? </span>
+      <label for="embroideryYes"> 
+        <input 
+          id="embroideryYes" 
+          type="radio" 
+          formControlName="embroidery"
+          name="embroidery"
+          value={{true}}/>
+        Sim
+      </label>  
+      <label for="embroideryNo"> 
+        <input 
+          id="embroideryNo" 
+          type="radio" 
+          formControlName="embroidery"
+          name="embroidery" 
+          value={{false}}/>
+        Não
       </label>
     </fieldset>
     <fieldset>
@@ -24,15 +47,34 @@
       <select
         formControlName="collection"
         name="" id="">
+        <option 
+          *ngFor="let collection of collections" 
+          value={{collection}}>
+          {{collection}} 
+        </option>
       </select>
-      <label for="" formControlName="print">
-        Possui estampa?
-        <input type="radio"/>
-        <input type="radio"/>
+      <span> Possui estampa? </span>
+      <label for="printYes"> 
+        <input 
+          id="printYes" 
+          type="radio" 
+          formControlName="print" 
+          name="print"
+          value={{true}}/>
+        Sim
       </label>  
+      <label for="printNo"> 
+        <input 
+          id="printNo" 
+          type="radio" 
+          formControlName="print" 
+          name="print" 
+          value={{false}}/>
+        Não
+      </label>
     </fieldset>
   </form>
-  <button (click)="onDelete()">Deletar</button>
-  <button (click)="onSubmit()">Salvar</button>
+  <button (click)="onDelete()">Excluir</button>
   <button>Cancelar</button>
+  <button (click)="onSubmit()">Salvar</button>
 </main>

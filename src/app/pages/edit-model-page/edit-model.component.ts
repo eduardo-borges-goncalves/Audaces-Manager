@@ -12,6 +12,8 @@ import { ModelsService } from 'src/app/services/models/models.service';
 export class EditModelComponent implements OnInit {
   public form!: FormGroup
   public submitted = true
+  public models!:Model[]
+  public collections: string[] = []
 
   constructor(
     private _service: ModelsService, 
@@ -41,10 +43,16 @@ export class EditModelComponent implements OnInit {
         this.updateForm(model)
       })
     })
+
+    this._service.get().subscribe(models => {
+      this.models = models
+      this.models.map(model =>{ this.collections.push(model.collection)})
+      this.collections = this.collections.filter((collection, index) =>
+        this.collections.indexOf(collection) === index )
+    })
   }
 
   public updateForm (model: Model) {
-    console.log("model", model)
     this.form.patchValue({
       id: model.id, 
       name: model.name, 

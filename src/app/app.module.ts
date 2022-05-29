@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -19,6 +19,11 @@ import { CollectionsListComponent } from './components/collections-list/collecti
 import { ModelsListComponent } from './components/models-list/models-list.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
+
+import ptBr from '@angular/common/locales/pt';
+import { registerLocaleData } from '@angular/common';
+
+registerLocaleData(ptBr);
 
 @NgModule({
   declarations: [
@@ -45,7 +50,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     NgbModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [
+    { provide: LOCALE_ID, useValue: "pt"}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
