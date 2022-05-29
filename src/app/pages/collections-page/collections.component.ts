@@ -8,7 +8,6 @@ import { CollectionsService } from 'src/app/services/collections/collections.ser
   styleUrls: ['./collections.component.scss']
 })
 export class CollectionsComponent implements OnInit {
-  
   thead = {
     th1: "ColeçãoID",
     th2: "Nome da Coleção",
@@ -16,18 +15,20 @@ export class CollectionsComponent implements OnInit {
     th4: "Responsável",
   }
 
-  routerLink = "/edit-collection/1" //tem um santo role aqui
+  // routerLink = "/edit-collection/1" //tem um santo role aqui
 
   collections:Collection[] = []
 
   constructor(private service: CollectionsService) {
     this.getCollections()
-   }
+  }
 
   ngOnInit(): void {
   }
-
+  
   getCollections () {
-    this.service.get().subscribe(collections => this.collections = collections)
+    console.log(this.collections)
+    this.service.get()
+    .subscribe(collections => this.collections = collections)
   }
 }

@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Models } from 'src/app/interfaces/models';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Model } from 'src/app/interfaces/models';
 import { TheadProps } from 'src/app/interfaces/thead';
 
 @Component({
@@ -11,10 +12,17 @@ export class ModelsListComponent implements OnInit {
 
   @Input() thead!: TheadProps 
   @Input() routerLink!: string
-  @Input() models!: Models[]
+  @Input() models!: Model[]
 
-  constructor() { }
+  constructor(
+    private _router: Router, 
+    private _activeRoute: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  onEdit(id: string) {
+    this._router.navigate(["edit", id], { relativeTo: this._activeRoute}) 
   }
 }

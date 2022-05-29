@@ -1,16 +1,18 @@
 <table>
   <thead>
-    <th>{{thead.th1}}</th>
-    <th>{{thead.th2}}</th>
-    <th>{{thead.th3}}</th>
-    <th>{{thead.th4}}</th>
+    <tr class="theadTr">
+      <th>{{thead.th1}}</th>
+      <th>{{thead.th2}}</th>
+      <th>{{thead.th3}}</th>
+      <th>{{thead.th4}}</th>
+    </tr>
   </thead>
   <tbody>
     <tr *ngFor="let collection of collections">
-      <a [routerLink]="[routerLink]">
+      <a  (click)="onEdit(collection.id)"> 
         <td>{{collection.id}}</td>
         <td>{{collection.name}}</td>
-        <td>{{collection.budget}}</td>
+        <td>{{collection.budget | currency: "BRL"}}</td>
         <td>{{collection.responsible}}</td>
       </a>
     </tr>

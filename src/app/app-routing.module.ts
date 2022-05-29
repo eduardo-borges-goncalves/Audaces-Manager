@@ -22,8 +22,8 @@ const routes: Routes = [
       { path: 'send-comment', component: HomeComponent},
       { path: 'create-collection', component: EditCollectionComponent},
       { path: 'create-model', component: EditModelComponent},
-      { path: 'edit-collection/:id', component: EditCollectionComponent},
-      { path: 'edit-model/:id', component: EditModelComponent},
+      { path: 'collections/edit/:id', component: EditCollectionComponent},
+      { path: 'models/edit/:id', component: EditModelComponent},
     ]
   },
   { path: 'login', component: LoginComponent}, 

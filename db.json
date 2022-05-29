@@ -1,0 +1,74 @@
+{
+  "modelos": [
+    {
+      "id": 2,
+      "name": "Modelo 2",
+      "type": "bermuda",
+      "responsible": "Izzie",
+      "collection": "Primavera"
+    },
+    {
+      "name": "Modelo 2",
+      "responsible": "Izzie",
+      "collection": "Outono",
+      "id": 3
+    },
+    {
+      "id": 6,
+      "name": "Modelo 1",
+      "type": "calcados",
+      "responsible": "naldo jao",
+      "collection": "crepúsculo",
+      "embroidery": "false",
+      "print": "false"
+    },
+    {
+      "id": 8,
+      "name": "Modelo 2",
+      "type": "biquini",
+      "responsible": "Izzie",
+      "collection": "verão"
+    },
+    {
+      "name": "Modelo 2",
+      "responsible": "Izzie",
+      "collection": "crepúsculo",
+      "id": 9
+    },
+    {
+      "id": 10,
+      "name": "oi joao ",
+      "type": "",
+      "responsible": "oi ",
+      "collection": "",
+      "embroidery": "",
+      "print": ""
+    }
+  ],
+  "colecoes": [
+    {
+      "id": 1,
+      "name": "Homeless Novel",
+      "budget": "250000",
+      "responsible": "Pedro",
+      "season": "Inverno",
+      "brand": "Balenciaga",
+      "launchYear": "2022"
+    },
+    {
+      "id": 2,
+      "name": "Outono Brilhante",
+      "budget": "75000",
+      "responsible": "Eduardo",
+      "season": "outono",
+      "brand": "Arezzo ",
+      "launchYear": "2022"
+    },
+    {
+      "id": 4,
+      "name": "Outono",
+      "budget": "75000",
+      "responsible": "Eduardo"
+    }
+  ]
+}

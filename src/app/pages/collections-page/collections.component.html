@@ -1,7 +1,12 @@
-<h1>Coleções</h1>
-<button>Criar Coleção</button>
-<app-collections-list
+<header>
+  <h1>Coleções</h1>
+  <a routerLink="/create-collection">
+    <button >Criar Coleção</button>
+  </a>
+</header>
+<section>
+  <app-collections-list
   [thead]="thead"
-  [routerLink]="routerLink"
   [collections]="collections"
-></app-collections-list>
+  ></app-collections-list>
+</section>
