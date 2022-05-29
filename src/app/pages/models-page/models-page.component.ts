@@ -3,11 +3,12 @@ import { Model } from 'src/app/interfaces/models';
 import { ModelsService } from 'src/app/services/models/models.service';
 
 @Component({
-  selector: 'app-models',
-  templateUrl: './models.component.html',
-  styleUrls: ['./models.component.scss']
+  selector: 'app-models-page',
+  templateUrl: './models-page.component.html',
+  styleUrls: ['./models-page.component.scss']
 })
-export class ModelsComponent implements OnInit {
+
+export class ModelsPageComponent implements OnInit {
   models: Model[] = []
 
   thead = {
@@ -17,14 +18,9 @@ export class ModelsComponent implements OnInit {
     th4: "Responsável",
   }
 
-  constructor(private service: ModelsService) {
-    this.getModels()
-   }
+  constructor(private service: ModelsService) {}
 
   ngOnInit(): void {
-  }
-
-  getModels() {
     this.service.get().subscribe(models => this.models = models)
   }
 
