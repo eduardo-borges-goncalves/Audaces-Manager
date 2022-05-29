@@ -10,14 +10,12 @@ import { CollectionsService } from 'src/app/services/collections/collections.ser
 export class HomeComponent implements OnInit {
   collections:Collection[] = []
 
-  constructor(private service: CollectionsService) { 
-    this.getCollections()
-  }
+  constructor(private _service: CollectionsService) { }
 
   ngOnInit(): void {
-  }
-
-  getCollections() {
-    this.service.get().subscribe(collections => this.collections = collections)
+    this._service.get().subscribe(collections => {    
+      this.collections = collections.slice(0,5)
+      this.collections.sort((x, y) => Number(y.budget) - Number(x.budget))
+    })
   }
 }

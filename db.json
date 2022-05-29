@@ -62,6 +62,33 @@
       "name": "Outono",
       "budget": "75000",
       "responsible": "Eduardo"
+    },
+    {
+      "id": 5,
+      "name": "Alberto Monteiro",
+      "season": "Inverno",
+      "budget": "800000",
+      "responsible": "Bruna",
+      "brand": "Douce Gabanna",
+      "launchYear": "2023"
+    },
+    {
+      "id": 6,
+      "name": "asdfasf",
+      "season": "asdfasd",
+      "budget": "100",
+      "responsible": "asdfasdf",
+      "brand": "asdfas",
+      "launchYear": "2022"
+    },
+    {
+      "id": 7,
+      "name": "joao ",
+      "season": "joao ",
+      "budget": "200",
+      "responsible": "joao ",
+      "brand": "joao ",
+      "launchYear": "joao "
     }
   ]
 }
