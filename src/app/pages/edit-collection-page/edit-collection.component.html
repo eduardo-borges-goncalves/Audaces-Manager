@@ -38,7 +38,7 @@
     alt="imagem de um manequim, além de 3 celulares, um com uma camisa, um com bolinhas e outros com linhas">
     <button class="btn btn-danger btn-del" *ngIf="this.form.value.id" (click)="onDelete()">Excluir</button>
     <div class="form-buttons">
-      <button class="btn-cancel" >Cancelar</button>
+      <button class="btn-cancel" (click)="onCancel()" >Cancelar</button>
       <button class="btn btn-primary" (click)="onSubmit()">Salvar</button>
     </div>
   </div>

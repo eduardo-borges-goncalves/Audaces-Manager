@@ -28,11 +28,11 @@ export class EditModelComponent implements OnInit {
     this.form = this._fb.group({
       id: null, 
       name: ["", [Validators.required, Validators.minLength(3)]], 
-      type: ["" ], 
+      type: ["", [Validators.required]], 
       responsible: ["",[ Validators.required, Validators.minLength(3)]], 
-      collection: [""], 
-      embroidery: [""],
-      print: [""],
+      collection: ["", [Validators.required]], 
+      embroidery: ["", [Validators.required]],
+      print: ["", [Validators.required]],
     })
 
     this._route.params.subscribe((params:any) =>{
@@ -75,12 +75,16 @@ export class EditModelComponent implements OnInit {
       }
       this._router.navigate(["/models"])
     } else {
-      // erro / form inválido 
+      window.alert("Algum campo não está preenchido corretamente ainda. Favor preencher todos os campos. ")
     }
   }
   
   public onDelete() {
     this._service.delete(this.form.value.id).subscribe()
+    this._router.navigate(["/models"])
+  }
+
+  public onCancel() {
     this._router.navigate(["/models"])
   }
 }
