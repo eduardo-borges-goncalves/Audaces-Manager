@@ -2,22 +2,22 @@
   <img src="../../../assets/isa 1 (1).svg" alt="">
   <h3>Audaces Manager</h3>
   <nav>
-    <a href="/" class="active" style="padding: 0 30px;">Dashboard</a>
+    <a [routerLink]="['/home']" routerLinkActive="active" >Dashboard</a>
     <span>CADASTROS</span>
     <ul>
-      <a [routerLink]="['/collections']">
+      <a [routerLink]="['/collections']" routerLinkActive="active">
         <li> Coleções </li>
       </a>
-      <a [routerLink]="['/models']">
+      <a [routerLink]="['/models']" routerLinkActive="active">
         <li> Modelos </li>
       </a>
     </ul>
     <span>SUPORTE</span>
     <ul>
-      <a [routerLink]="['/help']">
+      <a >
         <li> Obter Ajuda</li>
       </a>
-      <a [routerLink]="['/send-comment']">
+      <a >
         <li> Enviar Comentários </li>
       </a>
     </ul>
