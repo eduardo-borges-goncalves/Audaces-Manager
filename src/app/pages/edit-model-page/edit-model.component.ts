@@ -65,10 +65,8 @@ export class EditModelComponent implements OnInit {
   }
   
   public onSubmit() {
-    console.log("formulario valor", this.form.value)
     if(this.form.valid) {
       if(this.form.value.id) {
-        console.log("------")
         this._service.update(this.form.value).subscribe()
       } else {
         this._service.post(this.form.value).subscribe()

@@ -14,21 +14,13 @@ export class CollectionsComponent implements OnInit {
     th3: "Orçamento",
     th4: "Responsável",
   }
-
-  // routerLink = "/edit-collection/1" //tem um santo role aqui
-
   collections:Collection[] = []
 
-  constructor(private service: CollectionsService) {
-    this.getCollections()
-  }
+  constructor(private service: CollectionsService) {}
 
   ngOnInit(): void {
-  }
-  
-  getCollections () {
-    console.log(this.collections)
     this.service.get()
     .subscribe(collections => this.collections = collections)
   }
+  
 }
